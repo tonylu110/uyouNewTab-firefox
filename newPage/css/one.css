@@ -1,0 +1,118 @@
+@import url(./color.css);
+
+.button{
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--color90);
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px #00000070;
+    backdrop-filter: blur(40px);
+    margin-bottom: -200px;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 500px;
+    color: var(--textColor);
+}
+.button:hover{
+    background-color: var(--color70);
+}
+.button:active{
+    background-color: var(--color50);
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13.5px;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.oneMain{
+    position: fixed;
+    z-index: 200;
+    width: 550px;
+    height: 300px;
+    background-color: var(--color90);
+    box-shadow: 0px 0px 70px #00000070;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border-top: 2px solid var(--borderColor);
+    border-left: 2px solid var(--borderColor);
+    transition: 0.5s;
+}
+.oneMainBefore{
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    margin-top: 90vh;
+    transition: 0.5s;
+    z-index: 200;
+}
+.oneMainBeforeMobile{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20vh;
+    transition: 0.5s;
+    z-index: 200;
+}
+#innerMain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#innerMain div{
+    font-weight: bold;
+}
+#oneNum{
+    color: transparent;
+}
+#oneTxt{
+    width: 100%;
+    text-align: center;
+    color: transparent;
+}
+
+#oneFrom{
+    width: 100%;
+    text-align: right;
+    color: transparent;
+}
+
+#closeButton{
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+    background-color: var(--color90);
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #00000070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#closeButton:hover{
+    background-color: #00000005;
+}
+#closeButton:active{
+    background-color: #00000000;
+}
+#closeButton img{
+    width: 100%;
+    height: 100%;
+}

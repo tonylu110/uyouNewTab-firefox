@@ -1,0 +1,343 @@
+@import url(./color.css);
+@import url(./setting.css);
+@import url(./cal.css);
+@import url(./history.css);
+@import url(./info.css);
+@import url(./one.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-size: cover;
+}
+input{
+    background-color: var(--inputBackground);
+    color: var(--fontColor);
+}
+
+#weatherImg{
+    filter: drop-shadow(0px 0px 1px #00000050);
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+#weather{
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    transition: width 0.3s,height 0.3s,padding 0.3s,transform 0.3s;
+}
+#weather:active{
+    background-color: var(--searchBarColor);
+}
+.weatherCity{
+    display: flex;
+    flex-direction: row;
+}
+#weatherCityIn{
+    outline: none;
+    border: 0px;
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 170px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#weatherCityUp{
+    background-color: #0078d4;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
+    height: 17px;
+    line-height: 17px;
+}
+#weatherCityUp:active{
+    background-color: #035fa5;
+}
+#weatherMain{
+    margin-left: 20px;
+}
+.dayWeather{
+    position: absolute;
+    background-color: var(--weatherColor);
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+    top: 67px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--fontColor);
+    font-size: 12px;
+}
+#todayWeather{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: var(--weatherColor);
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    color: var(--fontColor);
+}
+.feaWeather{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    bottom: 0;
+}
+.feaWeatherbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    padding: 4px;
+    background-color: var(--weatherColor);
+    border-radius: 8px;
+    height: 100%;
+    text-align: center;
+    color: var(--fontColor);
+}
+.weatherTime{
+    background-color: var(--weatherColor);
+    padding: 3px;
+    margin-bottom: 2px;
+    width: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#click{
+    position: fixed;
+    width: 200vw;
+    height: 200vh;
+    background-color: var(--clickColor);
+}
+
+/* This is searchMain style */
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* This is searchbar style */
+.searchbar{
+    width: 570px;
+    height: 30px;
+    background-color: var(--searchBarColor);
+    box-shadow: 3px 3px 10px #00000050;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border-top: 2px solid var(--searchBarBorderColor);
+    border-left: 2px solid var(--searchBarBorderColor);
+    transition: 0.25s;
+    z-index: 5;
+}
+.searchbar:hover{
+    background-color: var(--searchBarColorHover);
+    border-top: 2px solid var(--searchBarBorderColorHover);
+    border-left: 2px solid var(--searchBarBorderColorHover);
+}
+.searchbar input{
+    border: 0px;
+    background-color: transparent;
+    border-radius: 6px;
+    height: 30px;
+    flex: 1;
+    font-size: 20px;
+    font-weight: bold;
+    outline: 0px;
+}
+.searchbar img{
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+.keywordsRight{
+    width: 2px;
+    height: 30px;
+    margin: 0px 10px 0px 10px;
+    background-color: var(--seaRight);
+}
+#searchBtn{
+    width: 0px;
+    text-align: center;
+    color: var(--fontColor);
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 28px;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+/* This is favourite link style */
+.link{
+    display: flex;
+    flex-direction: row;
+    width: 610px;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.link a div{
+    width: 50px;
+    height: 50px;
+    background-color: var(--searchBarColor);
+    backdrop-filter: blur(20px);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000050;
+    border-top: 2px solid var(--searchBarBorderColor);
+    border-left: 2px solid var(--searchBarBorderColor);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+.link div:hover{
+    background-color: var(--searchBarColorHover);
+    border-top: 2px solid var(--searchBarBorderColorHover);
+    border-left: 2px solid var(--searchBarBorderColorHover);
+}
+.link div:active{
+    background-color: var(--linkColorActive);
+    border-top: 2px solid var(--linkBorderColorActive);
+    border-left: 2px solid var(--linkBorderColorActive);
+}
+
+.link a div img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* This is top-left button element style */
+.title{
+    position: fixed;
+    right: 0;
+    z-index: 100;
+}
+.titleButton{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: var(--searchBarColor);
+    box-shadow: 5px 5px 30px #00000050;
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    cursor: pointer
+}
+.titleButton:active{
+    background-color: var(--linkBorderColorActive);
+}
+.titleButton img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Clock css */
+.mainClock{
+    width: 750px;
+    height: 400px;
+    background-color: var(--searchBarColor);
+    border-radius: 40px;
+    backdrop-filter: blur(40px);
+    border-top:2px solid var(--searchBarBorderColor);
+    border-left:2px solid var(--searchBarBorderColor);
+    box-shadow: 10px 5px 50px #00000050;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#time{
+    font-weight: bold;
+    font-size: 150px;
+    color: var(--fontColor);
+}
+
+/* searchengins css */
+
+.moreSearch{
+    position: fixed;
+    background-color: var(--searchBarColor);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px #00000050;
+    border-top: 2px solid var(--searchBarBorderColor);
+    border-left: 2px solid var(--searchBarBorderColor);
+    z-index: 4;
+    transition: transform 0.3s, opacity 0.2s;
+    margin-top: -30px;
+}
+.searchEngines{
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.searchEngines div{
+    padding: 25px;
+    border-radius: 20px;
+}
+.searchEngines div img{
+    width: 50px;
+    height: 50px;
+}
+.searchEngines div:hover{
+    background-color: #00000010;
+}
+
+#blackBack{
+    position: fixed;
+    background-color: #00000010;
+    width: 200vw;
+    height: 200vh;
+}
+
+#loading{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--linkBorderColorActive);
+    backdrop-filter: blur(20px);
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--fontColor);
+}
+#loading{
+    font-size: 50px;
+    font-weight: bold;
+}

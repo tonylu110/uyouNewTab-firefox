@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "uyou 新标签页",
+    "description": "这是一个很好看的新标签页！",
+    "version": "1.2.9",
+    "icons": {
+        "128": "extension.png",
+        "48": "extension.png",
+        "16": "extension.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "newPage/index.html"
+    },
+    "browser_action": {
+        "default_icon": "extension.png",
+        "browser_style": true,
+        "default_popup": "popupPage/extension.html"
+    },
+    "permissions": [
+        "history",
+        "storage",
+        "unlimitedStorage", 
+        "downloads"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
