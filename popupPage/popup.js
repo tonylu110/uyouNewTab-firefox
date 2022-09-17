@@ -6,11 +6,8 @@ window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').addEventL
     }
 })
 window.onload = function () {
-    document.getElementById('home').onclick = function () {
-        chrome.tabs.create();
-    }
     document.getElementById('web').onclick = function () {
-        chrome.tabs.create({
+        browser.tabs.create({
             url: 'https://newtab.uyou.org.cn/'
         });
     }
